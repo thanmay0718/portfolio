@@ -54,7 +54,11 @@ export default function AboutTechCerts() {
   ];
 
   return (
-    <div className="bg-background w-full py-24 z-20 relative">
+    <div className="bg-background w-full py-24 z-20 relative overflow-hidden">
+      {/* Background orbs for glass visibility */}
+      <div className="absolute top-[20%] left-[5%] w-[400px] h-[400px] bg-emerald-500/15 rounded-full blur-[120px] -z-10 mix-blend-screen pointer-events-none"></div>
+      <div className="absolute bottom-[20%] right-[5%] w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-[140px] -z-10 mix-blend-screen pointer-events-none"></div>
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-32">
         
         {/* About Section */}
@@ -63,16 +67,16 @@ export default function AboutTechCerts() {
             <h3 className="text-sm uppercase tracking-[0.2em] text-emerald-500 font-semibold mb-4 flex items-center gap-2">
               <GraduationCap size={18} /> About Me
             </h3>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Building Real Backend Systems.</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-8">Building Real Backend Systems.</h2>
             <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
               <p>
-                I'm a Computer Science undergrad at KL University (Class of 2027) building real backend systems — not just assignments.
+                I am a results-driven <strong className="text-white">Backend Engineer</strong> specializing in Java, Spring Boot, and Cloud Infrastructure. As a Computer Science undergrad at KL University (Class of 2027), I prioritize architecting highly scalable, production-ready systems over standard academic assignments.
               </p>
               <p>
-                My current focus is production-grade Java/Spring Boot development: I've shipped REST APIs with JWT security, designed relational DB schemas with JPA, deployed to AWS Elastic Beanstalk with RDS, and built an AI-powered microservices platform that integrates live weather data to automate insurance claims.
+                My engineering expertise lies in designing robust <strong className="text-white">RESTful APIs</strong>, securing architectures with zero-trust <strong className="text-white">JWT and RBAC</strong>, optimizing high-throughput PostgreSQL databases, and orchestrating enterprise deployments across AWS and Oracle Cloud Infrastructure.
               </p>
               <p>
-                I hold cloud certifications from Oracle (OCI Architect + Gen AI) and Microsoft (Azure Fundamentals). I'm actively sharpening my DSA skills on LeetCode while building things that run in the real world.
+                I hold dual Oracle Cloud certifications (Architect Associate + Gen AI) alongside Microsoft Azure credentials. Whether I am architecting AI-powered microservices that trigger real-time insurance payouts, or reducing monolithic load times on an e-commerce platform, my focus is delivering <strong className="text-emerald-400">measurable business impact, security, and uncompromising performance.</strong>
               </p>
             </div>
           </div>
@@ -106,11 +110,11 @@ export default function AboutTechCerts() {
           <h3 className="text-sm uppercase tracking-[0.2em] text-emerald-500 font-semibold mb-4 flex items-center gap-2">
             <Code2 size={18} /> Tech Arsenal
           </h3>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12">Tools & Technologies</h2>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-12">Tools & Technologies</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {stack.map((group, idx) => (
-              <div key={idx} className="glass-card p-6 flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+              <div key={idx} className="p-6 flex flex-col h-full hover:-translate-y-[2px] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] bg-[#1c1c1e]/75 hover:bg-[rgba(44,44,46,0.83)] backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[20px]">
                 <div className="mb-4 flex items-center gap-3">
                   <div className="p-3 bg-white/5 rounded-lg border border-white/10">
                     {group.icon}
@@ -134,11 +138,11 @@ export default function AboutTechCerts() {
           <h3 className="text-sm uppercase tracking-[0.2em] text-emerald-500 font-semibold mb-4 flex items-center gap-2">
             <ShieldCheck size={18} /> Credentials
           </h3>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12">Certifications</h2>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-12">Certifications</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {certifications.map((cert, idx) => (
-              <a href="#" key={idx} className="glass-card p-6 flex items-center gap-6 group hover:border-emerald-500/50 hover:bg-emerald-900/10 cursor-pointer">
+              <a href="#" key={idx} className="p-6 flex items-center gap-6 group cursor-pointer hover:-translate-y-[2px] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] bg-[#1c1c1e]/75 hover:bg-[rgba(44,44,46,0.83)] backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[20px] active:scale-[0.98]">
                 <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20 group-hover:scale-110 transition-transform">
                   <span className="font-black text-xl text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
                     {cert.badge}

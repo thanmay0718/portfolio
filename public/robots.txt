@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tanmay-codespace.vercel.app/sitemap.xml

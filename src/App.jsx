@@ -4,7 +4,7 @@ import ScrollyCanvas from './components/ScrollyCanvas';
 import Overlay from './components/Overlay';
 import Projects from './components/Projects';
 import AboutTechCerts from './components/AboutTechCerts';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
 
 function App() {
   const scrollContainerRef = React.useRef(null);
@@ -28,7 +28,11 @@ function App() {
       </div>
 
       {/* Contact & Footer */}
-      <footer id="contact" className="bg-[#0a0a0a] border-t border-white/10 pt-20 pb-10 px-6 z-20 relative">
+      <footer id="contact" className="bg-[#0a0a0a] border-t border-white/10 pt-20 pb-10 px-6 z-20 relative overflow-hidden">
+        {/* Background Orbs for Glassmorphism */}
+        <div className="absolute top-1/2 left-[20%] w-[300px] h-[300px] bg-emerald-500/15 rounded-full blur-[120px] -z-10 pointer-events-none -translate-y-1/2"></div>
+        <div className="absolute top-1/2 right-[20%] w-[400px] h-[400px] bg-blue-500/15 rounded-full blur-[140px] -z-10 pointer-events-none -translate-y-1/2"></div>
+        
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">Let's build something <span className="text-emerald-500">scalable.</span></h2>
@@ -37,15 +41,21 @@ function App() {
             </p>
           </div>
 
-          <div className="flex gap-4">
-            <a href="mailto:thanmay0718@gmail.com" className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emerald-500 hover:border-emerald-400 transition-all group">
-              <Mail className="text-gray-400 group-hover:text-white transition-colors" />
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="mailto:thanmay0718@gmail.com" className="w-14 h-14 rounded-[50px] flex items-center justify-center bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] active:scale-[0.98] group hover:-translate-y-[2px] hover:bg-emerald-500/20 hover:border-emerald-400/50">
+              <Mail className="text-gray-400 group-hover:text-emerald-300 transition-colors" />
             </a>
-            <a href="https://www.linkedin.com/in/thanmay0718/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group">
-              <Linkedin className="text-gray-400 group-hover:text-white transition-colors" />
+            <a href="https://www.linkedin.com/in/thanmay0718/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-[50px] flex items-center justify-center bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] active:scale-[0.98] group hover:-translate-y-[2px] hover:bg-blue-500/20 hover:border-blue-400/50">
+              <Linkedin className="text-gray-400 group-hover:text-blue-300 transition-colors" />
             </a>
-            <a href="https://github.com/thanmay0718" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all group">
-              <Github className="text-gray-400 group-hover:text-black transition-colors" />
+            <a href="https://github.com/thanmay0718" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-[50px] flex items-center justify-center bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] active:scale-[0.98] group hover:-translate-y-[2px] hover:bg-white/10 hover:border-white/30">
+              <Github className="text-gray-400 group-hover:text-white transition-colors" />
+            </a>
+            <a href="https://twitter.com/thanmay0718" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-[50px] flex items-center justify-center bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] active:scale-[0.98] group hover:-translate-y-[2px] hover:bg-sky-500/20 hover:border-sky-400/50">
+              <Twitter className="text-gray-400 group-hover:text-sky-300 transition-colors" />
+            </a>
+            <a href="https://instagram.com/thanmay0718" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-[50px] flex items-center justify-center bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] active:scale-[0.98] group hover:-translate-y-[2px] hover:bg-pink-500/20 hover:border-pink-400/50">
+              <Instagram className="text-gray-400 group-hover:text-pink-300 transition-colors" />
             </a>
           </div>
         </div>
