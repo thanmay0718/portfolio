@@ -36,7 +36,7 @@ export default function Overlay({ scrollContainerRef }) {
       </div>
 
       {/* Section 2 */}
-      <div className="h-screen w-full absolute top-[150vh] flex items-center justify-start px-[10%]">
+      <div className="h-screen w-full absolute top-[150vh] flex items-center justify-start px-[5%] md:px-[10%]">
         <motion.div style={{ y: y2, opacity: opacity2 }} className="text-left w-full max-w-4xl">
           <h2 className="text-4xl md:text-7xl font-bold tracking-tight leading-tight select-none drop-shadow-2xl text-white">
             Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 drop-shadow-none">scalable systems</span><br />
@@ -46,8 +46,8 @@ export default function Overlay({ scrollContainerRef }) {
       </div>
 
       {/* Section 3 */}
-      <div className="h-screen w-full absolute top-[300vh] flex items-center justify-end px-[10%]">
-        <motion.div style={{ y: y3, opacity: opacity3 }} className="text-right w-full max-w-2xl pointer-events-auto">
+      <div className="h-screen w-full absolute top-[300vh] flex items-center justify-center md:justify-end px-[5%] md:px-[10%]">
+        <motion.div style={{ y: y3, opacity: opacity3 }} className="text-center md:text-right w-full max-w-2xl pointer-events-auto">
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight leading-relaxed drop-shadow-xl text-white mb-6">
             CS undergrad at KL University (2027) · <span className="text-emerald-400">8.89 CGPA</span><br />
             Oracle Cloud & Azure certified.
@@ -56,7 +56,7 @@ export default function Overlay({ scrollContainerRef }) {
             I build production-grade backend systems — currently working on a full-stack e-commerce platform and an AI-powered insurance platform for gig workers.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-end">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-end">
             <a href="#projects" className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-medium transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
               View Projects <ArrowDown size={18} />
             </a>

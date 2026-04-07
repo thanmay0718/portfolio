@@ -52,9 +52,8 @@ export default function ScrollyCanvas({ scrollContainerRef }) {
     const img = images[index];
     if (!img.complete || img.naturalWidth === 0) return;
     
-    // Ensure canvas dimensions match screen
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Canvas dimensions are already handled by the resize event listener
+    // This prevents severe lag on mobile when scrolling.
     
     // Calculate object-fit: cover logic
     const imgRatio = img.width / img.height;
@@ -85,6 +84,11 @@ export default function ScrollyCanvas({ scrollContainerRef }) {
   // Re-render on resize
   useEffect(() => {
     const handleResize = () => {
+      if (canvasRef.current) {
+        canvasRef.current.width = window.innerWidth;
+        canvasRef.current.height = window.innerHeight;
+      }
+      
       // Re-trigger the current frame draw
       const latest = scrollYProgress.get();
       const frameIndex = Math.min(
@@ -93,6 +97,8 @@ export default function ScrollyCanvas({ scrollContainerRef }) {
       );
       renderFrame(frameIndex);
     };
+    
+    handleResize(); // Initial sizing
     
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
