@@ -7,7 +7,7 @@ const projects = [
     category: "Featured · Live",
     description: "Scalable Spring Boot + React app with JWT auth and RBAC. REST APIs for user mgmt, product catalog, and order processing. PostgreSQL / MySQL schema with JPA/Hibernate optimized queries. Deployed on AWS Elastic Beanstalk + RDS.",
     tags: ["Spring Boot", "React", "JWT", "AWS", "PostgreSQL", "Docker"],
-    github: "https://github.com/thanmay0718/sb-ecom",
+    github: "https://github.com/thanmay0718/E-Commerce-Project.git",
     live: "#"
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     category: "AI · Microservices",
     description: "Parametric insurance platform for gig workers — income protection against weather disruptions. Microservices: Spring Boot (core) + Python FastAPI (AI risk model). Integrates live weather & air quality APIs for automated claim triggers. JWT auth · role-based admin/worker access · end-to-end claim flow.",
     tags: ["Spring Boot", "Python", "Microservices", "React", "MySQL", "External APIs"],
-    github: "https://github.com/thanmay0718/GigShield-AI",
+    github: "https://github.com/thanmay0718/Gig-Sheild-AI.git",
     live: "#"
   },
   {

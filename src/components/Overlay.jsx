@@ -22,12 +22,12 @@ export default function Overlay({ scrollContainerRef }) {
 
   return (
     <div className="absolute top-0 left-0 w-full h-[500vh] pointer-events-none z-10 flex flex-col justify-start">
-      
+
       {/* Section 1 */}
       <div className="h-screen w-full sticky top-0 flex items-center justify-center">
         <motion.div style={{ y: y1, opacity: opacity1 }} className="text-center px-4 w-full">
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-4 select-none drop-shadow-2xl text-white">
-            Hi, I'm Tanmay <span className="text-emerald-400">—</span>
+            Hi, I'm Tanmay Sri Vardhan
           </h1>
           <p className="text-xl md:text-3xl text-gray-300 font-light tracking-wide select-none drop-shadow-xl mt-4">
             Backend Engineer & Cloud Certified
@@ -39,7 +39,7 @@ export default function Overlay({ scrollContainerRef }) {
       <div className="h-screen w-full absolute top-[150vh] flex items-center justify-start px-[10%]">
         <motion.div style={{ y: y2, opacity: opacity2 }} className="text-left w-full max-w-4xl">
           <h2 className="text-4xl md:text-7xl font-bold tracking-tight leading-tight select-none drop-shadow-2xl text-white">
-            Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 drop-shadow-none">scalable systems</span><br/>
+            Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 drop-shadow-none">scalable systems</span><br />
             with Spring Boot · AWS · APIs.
           </h2>
         </motion.div>
@@ -49,13 +49,13 @@ export default function Overlay({ scrollContainerRef }) {
       <div className="h-screen w-full absolute top-[300vh] flex items-center justify-end px-[10%]">
         <motion.div style={{ y: y3, opacity: opacity3 }} className="text-right w-full max-w-2xl pointer-events-auto">
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight leading-relaxed drop-shadow-xl text-white mb-6">
-            CS undergrad at KL University (2027) · <span className="text-emerald-400">8.89 CGPA</span><br/>
+            CS undergrad at KL University (2027) · <span className="text-emerald-400">8.89 CGPA</span><br />
             Oracle Cloud & Azure certified.
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-light mb-10 drop-shadow-lg">
             I build production-grade backend systems — currently working on a full-stack e-commerce platform and an AI-powered insurance platform for gig workers.
           </p>
-          
+
           <div className="flex flex-wrap gap-4 justify-end">
             <a href="#projects" className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-medium transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
               View Projects <ArrowDown size={18} />
