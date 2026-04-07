@@ -4,7 +4,7 @@ import ScrollyCanvas from './components/ScrollyCanvas';
 import Overlay from './components/Overlay';
 import Projects from './components/Projects';
 import AboutTechCerts from './components/AboutTechCerts';
-import { Mail, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
+import { Mail, Linkedin, Github, Twitter, Instagram, Phone } from 'lucide-react';
 
 function App() {
   const scrollContainerRef = React.useRef(null);
@@ -34,11 +34,25 @@ function App() {
         <div className="absolute top-1/2 right-[20%] w-[400px] h-[400px] bg-blue-500/15 rounded-full blur-[140px] -z-10 pointer-events-none -translate-y-1/2"></div>
         
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">Let's build something <span className="text-emerald-500">scalable.</span></h2>
-            <p className="text-gray-400 max-w-md">
-              Currently open for new opportunities. Feel free to reach out for collaborations or just a friendly hello.
-            </p>
+          <div className="flex flex-col gap-8">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">Let's build something <span className="text-emerald-500">scalable.</span></h2>
+              <p className="text-gray-400 max-w-md">
+                Currently open for new opportunities. Feel free to reach out for collaborations or just a friendly hello.
+              </p>
+            </div>
+            
+            <a href="tel:+917396767655" className="inline-flex items-center gap-4 w-fit bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[50px] px-5 py-3 transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-[2px] hover:bg-emerald-500/15 hover:border-emerald-500/30 group active:scale-[0.98]">
+              <div className="bg-[#ffffff0a] border border-white/10 border-t-white/20 p-2.5 rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] group-hover:bg-emerald-500/20 transition-colors">
+                <Phone className="text-emerald-400 w-5 h-5 group-hover:scale-110 transition-transform" />
+              </div>
+              <div className="flex flex-col pr-2">
+                <span className="text-[11px] uppercase tracking-wider text-emerald-500/80 font-bold mb-0.5">Direct Line</span>
+                <span className="text-lg font-semibold text-gray-200 group-hover:text-white transition-colors tracking-widest font-mono">
+                  +91 73967 67655
+                </span>
+              </div>
+            </a>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">

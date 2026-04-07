@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Home, User, Code2, FolderGit2, Mail } from 'lucide-react';
 
@@ -12,6 +12,37 @@ export default function Navbar() {
     { name: 'Projects', href: '#projects', icon: FolderGit2 },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentActive = 'Home';
+      
+      navItems.forEach(item => {
+        if (item.href === '#') return; // Default starting position
+        
+        const section = document.getElementById(item.href.replace('#', ''));
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          // If the top of the section crosses the upper half of the screen
+          if (rect.top <= window.innerHeight / 2.5) {
+            currentActive = item.name;
+          }
+        }
+      });
+
+      // Override if user hits the absolute bottom of the page (for Contact)
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        currentActive = 'Contact';
+      }
+
+      setActive(currentActive);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Trigger immediately to set initial route
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.nav 

@@ -50,6 +50,21 @@ export default function AboutTechCerts() {
       title: "HackerRank Software Engineer Certification",
       issuer: "HackerRank · Problem Solving",
       badge: "HR"
+    },
+    {
+      title: "Salesforce Certified AI Associate",
+      issuer: "Salesforce · Artificial Intelligence",
+      badge: "SF"
+    },
+    {
+      title: "Aviatrix Certified Engineer - Multicloud Network Associate",
+      issuer: "Aviatrix · Multicloud Networking",
+      badge: "ACE"
+    },
+    {
+      title: "AI-ML Virtual Internship (10 Weeks)",
+      issuer: "Google for Developers + AICTE + EduSkills",
+      badge: "ML"
     }
   ];
 
@@ -63,21 +78,49 @@ export default function AboutTechCerts() {
         
         {/* About Section */}
         <section id="about" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h3 className="text-sm uppercase tracking-[0.2em] text-emerald-500 font-semibold mb-4 flex items-center gap-2">
-              <GraduationCap size={18} /> About Me
+          <div className="bg-[#1c1c1e]/75 backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[24px] p-8 md:p-10 transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-[2px] hover:bg-[rgba(44,44,46,0.83)] group">
+            <h3 className="text-sm uppercase tracking-[0.2em] text-emerald-500 font-semibold mb-3 flex items-center gap-2">
+              <GraduationCap size={18} /> Professional Summary
             </h3>
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-8">Building Real Backend Systems.</h2>
-            <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-              <p>
-                I am a results-driven <strong className="text-white">Backend Engineer</strong> specializing in Java, Spring Boot, and Cloud Infrastructure. As a Computer Science undergrad at KL University (Class of 2027), I prioritize architecting highly scalable, production-ready systems over standard academic assignments.
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 text-white">Results-Driven Backend Engineer.</h2>
+            
+            <div className="space-y-6 text-gray-300 text-[15px] leading-relaxed">
+              <p className="text-base text-gray-200">
+                As a Computer Science Undergrad at KL University (Class of 2027), my mandate is bypassing academic norms to engineer production-grade, highly concurrent enterprise backend systems.
               </p>
-              <p>
-                My engineering expertise lies in designing robust <strong className="text-white">RESTful APIs</strong>, securing architectures with zero-trust <strong className="text-white">JWT and RBAC</strong>, optimizing high-throughput PostgreSQL databases, and orchestrating enterprise deployments across AWS and Oracle Cloud Infrastructure.
-              </p>
-              <p>
-                I hold dual Oracle Cloud certifications (Architect Associate + Gen AI) alongside Microsoft Azure credentials. Whether I am architecting AI-powered microservices that trigger real-time insurance payouts, or reducing monolithic load times on an e-commerce platform, my focus is delivering <strong className="text-emerald-400">measurable business impact, security, and uncompromising performance.</strong>
-              </p>
+              
+              <div className="space-y-5 mt-8">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] shrink-0"></div>
+                  <div>
+                    <strong className="text-white font-semibold">Architecture & APIs:</strong> Specializing in Java & Spring Boot microservices, high-throughput RESTful routing, and zero-trust JWT/RBAC security logic.
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)] shrink-0"></div>
+                  <div>
+                    <strong className="text-white font-semibold">Data & Optimization:</strong> Designing robust relational schemas (PostgreSQL/MySQL) with advanced JPA/Hibernate database tuning to crush query latency.
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] shrink-0"></div>
+                  <div>
+                    <strong className="text-white font-semibold">Cloud Infrastructure:</strong> Orchestrating enterprise deployments and scalable architecture across AWS Elastic Beanstalk and Oracle Cloud Infrastructure.
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.8)] shrink-0"></div>
+                  <div>
+                    <strong className="text-white font-semibold">Algorithmic Problem Solving:</strong> Rigorously applying Data Structures & Algorithms (DSA) to engineer highly optimized, computationally efficient workflows.
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap gap-3 items-center">
+                <span className="bg-[#ffffff08] inset-shadow text-emerald-300 border border-emerald-500/20 border-t-emerald-500/40 px-4 py-2 rounded-full text-[13px] font-medium shadow-[inset_0_1px_0_rgba(16,185,129,0.2)]">Oracle Cloud Architect</span>
+                <span className="bg-[#ffffff08] inset-shadow text-white border border-white/10 border-t-white/30 px-4 py-2 rounded-full text-[13px] font-medium shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]">Oracle Gen AI</span>
+                <span className="bg-[#ffffff08] inset-shadow text-blue-300 border border-blue-500/20 border-t-blue-500/40 px-4 py-2 rounded-full text-[13px] font-medium shadow-[inset_0_1px_0_rgba(59,130,246,0.2)]">Azure Fundamentals</span>
+              </div>
             </div>
           </div>
           
@@ -116,14 +159,14 @@ export default function AboutTechCerts() {
             {stack.map((group, idx) => (
               <div key={idx} className="p-6 flex flex-col h-full hover:-translate-y-[2px] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] bg-[#1c1c1e]/75 hover:bg-[rgba(44,44,46,0.83)] backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[20px]">
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="p-3 bg-white/5 rounded-lg border border-white/10">
+                  <div className="p-3 bg-[#ffffff0a] rounded-[14px] border border-white/5 border-t-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]">
                     {group.icon}
                   </div>
                   <h4 className="text-xl font-semibold text-gray-100">{group.category}</h4>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto pt-4">
                   {group.items.map(item => (
-                    <span key={item} className="bg-white/5 hover:bg-white/10 transition-colors border border-white/10 px-3 py-1.5 rounded-md text-sm text-gray-300 w-full text-center">
+                    <span key={item} className="bg-[#ffffff08] hover:bg-[#ffffff15] transition-all duration-300 border border-white/5 border-t-white/20 px-3 py-1.5 rounded-full text-[13px] font-medium text-gray-300 w-full text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
                       {item}
                     </span>
                   ))}
@@ -142,9 +185,17 @@ export default function AboutTechCerts() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {certifications.map((cert, idx) => (
-              <a href="#" key={idx} className="p-6 flex items-center gap-6 group cursor-pointer hover:-translate-y-[2px] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] bg-[#1c1c1e]/75 hover:bg-[rgba(44,44,46,0.83)] backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[20px] active:scale-[0.98]">
-                <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20 group-hover:scale-110 transition-transform">
-                  <span className="font-black text-xl text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
+              <a 
+                href="#" 
+                key={idx} 
+                className={`p-6 flex items-center gap-6 group cursor-pointer hover:-translate-y-[2px] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] bg-[#1c1c1e]/75 hover:bg-[rgba(44,44,46,0.83)] backdrop-blur-[20px] backdrop-saturate-[180%] border border-white/5 border-t-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] rounded-[20px] active:scale-[0.98] ${
+                  idx === certifications.length - 1 && certifications.length % 2 !== 0 
+                  ? 'md:col-span-2 md:w-[calc(50%-12px)] md:justify-self-center' 
+                  : ''
+                }`}
+              >
+                <div className="w-16 h-16 rounded-[18px] bg-[#ffffff08] flex items-center justify-center shrink-0 border border-white/5 border-t-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] group-hover:scale-105 group-hover:bg-[#ffffff15] transition-all duration-[300ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+                  <span className="font-black text-xl text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                     {cert.badge}
                   </span>
                 </div>
